@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sign up with Elgoog</title>
+    </head>
+
+    <body>
+        <h1>Elgoog OAuth</h1>
+        <h2>{{version}} Plan</h2>
+        
+        <h1>Sign up</h1>
+
+        {% if error %}
+            <div style="background-color: #d8797a; font-size: 1em; padding: 1em">
+                {{ error }}
+            </div>
+        {% endif %}
+
+        <br />
+
+        <form action="/signup" method="post">
+            <label>Username</label><br />
+            <input type="text" id="username" name="username" /><br /><br />
+
+            <label>Password</label><br />
+            <input type="password" id="password" name="password" /><br /><br />
+
+            <input type="submit" value="Sign up">
+        </form>
+
+        <br />
+        <a href="/">Login</a>
+    </body>
+</html>
